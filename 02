@@ -1,0 +1,34 @@
+- HELLO WORLD -
+
+script 태그
+
+<script></script> 태그를 사용하면 HTML문서 대부분 위치에 사용 가능
+이 태그를 사용해 브라우저를 만나면 아래의 코드를 자동으로 처리하게 된다
+
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+  <p>스크립트 전</p>
+
+  <script>
+    alert( 'Hello, world!' );
+  </script>
+
+  <p>스크립트 후</p>
+
+</body>
+
+</html>
+
+스크립트에 type 속성과 language 속성을 사용했지만 지금은 타입명시가 필수가 아님
+
+코드의 양이 많으면 외부에 작성한 스크립트를 끌어올 수 있는데 그럴땐 <script src="/path/to/script.js"></script> 이런식으로 스크립트가 담겨있는 파일 이름들까지 작성해주면 된다.
+url 형태의 속성으로 사용가능한데 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js"></script> 이런식으로 작성하면 되고
+여러개의 스크립트 태그를 사용하고 싶을땐 그 아래에 여러개의 태그를 걸면 된다.
+<script src="/js/script1.js"></script>
+<script src="/js/script2.js"></script>
+
+만약 외부에서 작성한 코드를 끌어왔을 경우 그 태그 사이에 내용은 집어넣게 되어도 src를 썻기 때문에 실행되지 않음.
+따라서 <script src="…">로 외부 파일을 연결할지 아니면 <script> 태그 내에 코드를 작성할지를 선택해야 함!!!
